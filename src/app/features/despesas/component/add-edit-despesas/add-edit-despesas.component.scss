@@ -1,0 +1,43 @@
+/* expense-form.component.css */
+.expense-form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  button {
+    display: block;
+    margin-top: 20px;
+  }
+
+
+
+
+
+
+
+
+
+  mat-form-field {
+    /* Ajuste a espessura da linha */
+    border-width: 1px; /* Espessura padrão */
+}
+
+mat-form-field.mat-focused .mat-form-field-outline {
+    border-color: rgba(0, 0, 0, 0.5); /* Cor do contorno quando focado */
+}
+
+/* Adicionando uma classe para customização do label */
+mat-label {
+    color: rgba(0, 0, 0, 0.54); /* Cor do rótulo padrão */
+}
+
+/* Alterando a cor do rótulo ao focar */
+mat-form-field.mat-focused mat-label {
+    color: rgba(0, 0, 0, 0.87); /* Cor do rótulo ao focar */
+}

@@ -1,0 +1,163 @@
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+/* Estilo do conteúdo central com espaçamento e centralização */
+.pane-content {
+  flex: 1;
+  padding: 48px; /* Espaçamento ao redor do conteúdo */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px; /* Largura máxima do painel central */
+  box-sizing: border-box;
+}
+
+/* Configuração do contêiner do sidenav */
+.sidenav-container {
+  height: 100vh;
+}
+
+/* Estilo do menu lateral */
+.sidenav {
+  width: 250px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color, #3f51b5); 
+}
+
+.sidenav mat-icon,
+.sidenav span {
+  color: white;
+}
+
+.divider {
+  height: 1px; /* Espessura do divisor */
+  background-color: rgba(255, 255, 255, 0.12); /* Cor do divisor */
+  margin: 16px 0; /* Espaçamento em cima e embaixo do divisor */
+}
+
+.sidenav mat-list-item {
+  padding: 16px; /* Espaçamento interno dos itens */
+}
+
+.sidenav mat-list-item:last-child {
+  margin-top: auto; /* Empurra o item de Logout para o fundo do menu */
+}
+/* Estilo do ícone e alinhamento do menu */
+.sidenav mat-list-item {
+  display: flex;
+  align-items: center;
+
+  .mat-icon {
+    vertical-align: middle !important;
+  }
+  
+}
+
+.sidenav mat-icon {
+  margin-right: 8px;
+}
+
+/* Barra de ferramentas */
+mat-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+.home {
+  
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Configuração do conteúdo principal com espaçamento */
+.pane-content {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .sidenav {
+    width: 240px; /* Largura do sidenav em mobile */
+  }
+
+  .pane-content {
+    padding: 16px; /* Reduz preenchimento em telas menores */
+  }
+
+  #hidemenu {
+    display: none; /* Esconder ícone de esconder menu */
+  }
+
+  .home {
+    display: block; /* Mostrar botão Home */
+  }
+}
+
+
+
+
+
+
+
+
+.sidenav {
+  display: flex; /* Habilita flexbox no sidenav */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  height: 100%; /* Ocupa 100% da altura */
+}
+
+.nav-list {
+  flex: 1; /* Permite que a lista ocupe o espaço disponível */
+  overflow-y: auto; /* Adiciona rolagem se necessário */
+}
+
+.spacer {
+  height: 57%;
+  flex: 1; /* Espaço flexível que empurra o footer para baixo */
+}
+
+
+.footer mat-list-item {
+  justify-content: center; /* Centraliza o conteúdo do item */
+}
+
+
+.mat-expansion-panel-header {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1); /* Um leve fundo para o cabeçalho */
+}
+
+.mat-nav-list {
+  padding-left: 20px; /* Indentação para itens de sub-menu */
+}
+
+
+
+
+
+
+
+
+/* Regras de responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .pane-content {
+    padding: 16px; /* Reduz preenchimento em telas menores */
+  }
+}
+

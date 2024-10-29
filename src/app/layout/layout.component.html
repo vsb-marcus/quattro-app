@@ -1,0 +1,72 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Menu lateral -->
+  <mat-sidenav #sidenav [mode]="sidenavMode" [(opened)]="isSidenavOpen" class="sidenav mat-primary">
+    <mat-nav-list class="nav-list">
+      <mat-list-item (click)="closeSidenav()">
+        <button mat-button aria-label="Home" class="mat-mdc-focus-indicator">
+          <span style="font-weight: 600;">MENU</span>
+        </button>
+        <mat-icon id="hidemenu" style="float: right; width: 42px;" (click)="toggleSidenav()">chevron_left</mat-icon>
+      </mat-list-item>
+      <mat-list-item routerLink="/despesas" (click)="closeSidenav()">
+        <mat-icon>attach_money</mat-icon>
+        <span>Despesas</span>
+      </mat-list-item>
+
+        <!-- Sub-menu de Despesas -->
+    <div style="padding-left: 20px;">
+      <mat-list-item routerLink="/despesas/add-edit" (click)="closeSidenav()">
+        <mat-icon>add</mat-icon>
+        <span>Adicionar Despesa</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/despesas/add-edit" (click)="closeSidenav()">
+        <mat-icon>edit</mat-icon>
+        <span>Editar Despesa</span>
+      </mat-list-item>
+    </div>
+
+      <mat-list-item routerLink="/despesas" (click)="closeSidenav()">
+        <mat-icon>people</mat-icon>
+        <span>Sócios</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/despesas" (click)="closeSidenav()">
+        <mat-icon>business</mat-icon>
+        <span>Centro de custo</span>
+      </mat-list-item>
+    </mat-nav-list>
+
+    <!-- Espaço flexível para empurrar o Logout para o fundo -->
+    <div class="spacer"></div>
+    <div class="divider"></div>
+    <!-- Footer com Logout -->
+    <div class="footer">
+      <mat-list-item (click)="logout()" style="cursor: pointer;">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </mat-list-item>
+    </div>
+  </mat-sidenav>
+
+  <!-- Conteúdo principal -->
+  <mat-sidenav-content>
+    <div class="pane">
+      <mat-toolbar class="mat-elevation-z6">
+        <button *ngIf="!isSidenavOpen" mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <button class="home" style="color: #666666;" mat-button aria-label="Home" routerLink="/despesas">
+          {{ title }}
+        </button>
+
+        <span class="toolbar-spacer"></span>
+        <button mat-raised-button color="primary" routerLink="/despesas/add-edit">
+          NOVA DESPESA
+        </button>
+      </mat-toolbar>
+
+      <div class="pane-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

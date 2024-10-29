@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+
+  mat-cell {
+    text-align: right; /* Alinha o conteúdo da célula à direita */
+  }
+  
+  .actions-column {
+    width: 100px; /* Definindo uma largura fixa para a coluna de ações, se desejado */
+  }
+  
+  @media (max-width: 768px) { /* Ajuste o valor conforme necessário */
+    .cost-center-column {
+      display: none; /* Oculta a coluna Centro de Custo */
+    }
+  }
